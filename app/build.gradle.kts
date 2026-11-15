@@ -1,6 +1,6 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    // Kotlin vem do próprio AGP (built-in Kotlin). Só o compilador Compose é plugin à parte.
     id("org.jetbrains.kotlin.plugin.compose")
 }
 
@@ -11,7 +11,8 @@ val ksPath = System.getenv("KEYSTORE_FILE")
 
 android {
     namespace = "com.rib1801.smoke"
-    compileSdk = 36
+    // Compose 1.12+ (BOM 2026.09.00) exige compileSdk 37 / AGP 9.
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.rib1801.smoke"
