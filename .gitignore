@@ -1,0 +1,19 @@
+# Gradle
+.gradle/
+build/
+local.properties
+
+# Android / IDE
+*.iml
+.idea/
+.cxx/
+captures/
+
+# Keystores e segredos — NUNCA commitar
+*.jks
+*.p12
+*.keystore
+keystore.properties
+
+# OS
+.DS_Store
