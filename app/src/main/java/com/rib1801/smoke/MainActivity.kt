@@ -71,6 +71,12 @@ fun CounterScreen() {
             OutlinedButton(onClick = { count = 0 }) { Text("Zerar") }
             Spacer(Modifier.height(40.dp))
             Text(
+                text = "auto-update OK",
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.primary
+            )
+            Spacer(Modifier.height(8.dp))
+            Text(
                 text = "versão ${BuildConfig.VERSION_NAME}\nversionCode ${BuildConfig.VERSION_CODE}",
                 style = MaterialTheme.typography.bodySmall,
                 textAlign = TextAlign.Center,

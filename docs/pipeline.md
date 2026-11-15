@@ -24,6 +24,8 @@ Documento para agentes e para mim no futuro. Se algo aqui conflitar com o que vo
 3. **O `kotlin { compilerOptions { } }` continua válido** mesmo com Kotlin embutido (só `android.kotlinOptions {}` está morto).
 4. **Log do GitHub mascara valores de secrets**: o alias `smoke` aparece como `***` em logs; não é corrupção do APK.
 5. `versionCode` nunca na mão. Vem de `GITHUB_RUN_NUMBER`, e por isso releases "pulam" números entre branches — é esperado.
+6. **Repo privado quebra o Obtainium**: ele consulta a API anônima, recebe `404` e mostra "não foi possível localizar um lançamento adequado". Ou o repo é público, ou o usuário cola um PAT (escopo `repo`) em Settings → GitHub no Obtainium. Repo público também dá minutos de Actions ilimitados.
+7. A visibilidade pública não expõe nada: keystore fica no `.gitignore` e secrets continuam ocultos.
 
 ## Regras inegociáveis
 
